@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お食事処 ○○（店舗名）</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; text-align: center; }
+        header { background: #8B4513; color: white; padding: 40px 20px; }
+        main { padding: 20px; max-width: 600px; margin: 0 auto; }
+        .menu-buttons { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
+        .btn { display: block; background: #d2b48c; color: #5c2e0b; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; }
+        .btn:hover { background: #c19a6b; }
+        section { margin-bottom: 30px; text-align: left; }
+        footer { padding: 20px; background: #f4f4f4; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>お食事処 ○○</h1>
+        <p>〜 心を込めた手作り料理をお届けします 〜</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>お品書き（メニュー）</h2>
+            <p>ご覧になりたいメニューを選んでください。</p>
+            
+            <!-- 各ページへのリンクボタン -->
+            <div class="menu-buttons">
+                <a href="general.html" class="btn">🍳 一般メニュー</a>
+                <a href="evening.html" class="btn">🌙 夕方（夜）メニュー</a>
+                <a href="kids.html" class="btn">🧸 お子様用メニュー</a>
+            </div>
+        </section>
+
+        <section style="border-top: 1px solid #ddd; padding-top: 20px;">
+            <h2>店舗情報</h2>
+            <p><strong>営業時間：</strong>11:30 〜 21:00</p>
+            <p><strong>住所：</strong>東京都〇〇区1-2-3</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 お食事処 ○○</p>
+    </footer>
+
+</body>
+</html>
