@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レストラン</title>
+    <style>
+        html, body { margin: 0; padding: 0; min-height: 100vh; }
+        body { 
+            font-family: sans-serif; color: #333; line-height: 1.6; text-align: center; 
+            background-image: url('IMG_3693.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* ヘッダーの不透明度を 0.9 -> 0.75 に変更 */
+        header { 
+            background: rgba(139, 69, 19, 0.75); 
+            color: white; 
+            padding: 40px 20px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        /* メインカードの不透明度を 0.88 -> 0.65 に変更 */
+        main { 
+            padding: 30px 20px; 
+            max-width: 600px; 
+            margin: 30px auto; 
+            background: rgba(255, 255, 255, 0.65); 
+            backdrop-filter: blur(12px); 
+            -webkit-backdrop-filter: blur(12px); 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+            text-align: left; 
+        }
+        .menu-buttons { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
+        /* ボタンの不透明度も若干調整して統一感を出しています */
+        .btn { 
+            display: block; 
+            background: rgba(227, 196, 154, 0.9); 
+            color: #5c2e0b; 
+            padding: 15px; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+            text-align: center; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08); 
+            transition: background 0.3s;
+        }
+        .btn:hover { background: rgba(210, 180, 140, 0.95); }
+        section { margin-bottom: 30px; text-align: left; }
+        /* フッターの不透明度を 0.5 -> 0.35 に変更 */
+        footer { 
+            padding: 30px 20px; 
+            background: rgba(255, 255, 255, 0.35); 
+            font-size: 0.8rem; 
+            margin-top: 50px; 
+            text-align: center; 
+        }
+        .info-p { margin: 8px 0; }
+        h2 { 
+            font-size: 1.4rem; 
+            color: #5c2e0b; 
+            margin-top: 0; 
+            margin-bottom: 15px; 
+            border-bottom: 2px solid rgba(227, 196, 154, 0.8); 
+            padding-bottom: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>レストラン</h1>
+    </header>
+    <main>
+        <section>
+            <h2>お品書き（メニュー）</h2>
+            <p>ご覧になりたいメニューを選んでください。</p>
+            <div class="menu-buttons">
+                <a href="general.html" class="btn">一般メニュー</a>
+                <a href="evening.html" class="btn">夕方（夜）メニュー</a>
+            </div>
+        </section>
+        <section style="border-top: 1px solid rgba(0, 0, 0, 0.1); padding-top: 20px; margin-top: 30px;">
+            <h2>店舗情報</h2>
+            <p class="info-p"><strong>営業時間：</strong>11:30 〜 21:00</p>
+            <p class="info-p"><strong>住所：</strong>東京都渋谷区</p>
+            <p class="info-p"><strong>電話番号：</strong>03-XXXX-XXXX</p>
+        </section>
+    </main>
+    <footer><p>&copy; 2026 レストラン</p></footer>
+</body>
+</html>
