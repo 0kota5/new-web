@@ -3,93 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お食事処 ○○</title>
+    <title>レストラン</title>
     <style>
-        /* 1. 画面全体のデザイン */
         html, body { margin: 0; padding: 0; min-height: 100vh; }
         body { 
             font-family: sans-serif; color: #333; line-height: 1.6; text-align: center; 
-            /* あなたが撮影した「斜めの光とブレのデザイン写真」を画面全体に固定して背景にします */
-            background-image: url('bg.png');
+            background-image: url('IMG_3693.jpeg');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
         header { background: rgba(139, 69, 19, 0.9); color: white; padding: 40px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        main { padding: 30px 20px; max-width: 600px; margin: 30px auto; background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 16px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); text-align: left; }
+        .menu-buttons { display: flex; flex-direction: column; gap: 15px; margin: 30px 0; }
+        .btn { display: block; background: #e3c49a; color: #5c2e0b; padding: 15px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .btn:hover { background: #d2b48c; }
+        section { margin-bottom: 30px; text-align: left; }
         footer { padding: 30px 20px; background: rgba(255, 255, 255, 0.5); font-size: 0.8rem; margin-top: 50px; text-align: center; }
-
-        /* 2. 各コンテンツを囲む白いボックス */
-        .white-box {
-            padding: 30px 20px; 
-            max-width: 600px; 
-            margin: 30px auto; 
-            background: rgba(255, 255, 255, 0.88); 
-            backdrop-filter: blur(10px); 
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 16px; 
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
-            text-align: left;
-        }
-
-        /* 3. パーツやメニューのデザイン */
-        .menu-item { padding: 15px 0; display: flex; justify-content: space-between; align-items: baseline; font-weight: bold; border-bottom: 1px dashed #ddd; }
-        .menu-desc { font-size: 0.9rem; color: #666; margin-top: 5px; margin-bottom: 25px; line-height: 1.4; }
         .info-p { margin: 8px 0; }
         h2 { font-size: 1.4rem; color: #5c2e0b; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #e3c49a; padding-bottom: 5px; }
-        .section-block { margin-bottom: 40px; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>お食事処 ○○</h1>
+        <h1>レストラン</h1>
         <p>〜 心を込めた手作り料理をお届けします 〜</p>
     </header>
-
-    <main class="white-box">
-        <!-- 【一般メニュー】 -->
-        <div class="section-block">
-            <h2>一般メニュー</h2>
-            <div class="menu-item">
-                <span>白米（ごはん）</span>
-                <span>200円</span>
+    <main>
+        <section>
+            <h2>お品書き（メニュー）</h2>
+            <p>ご覧になりたいメニューを選んでください。</p>
+            <div class="menu-buttons">
+                <!-- ここからそれぞれの別ページへジャンプします -->
+                <a href="general.html" class="btn">一般メニュー</a>
+                <a href="evening.html" class="btn">夕方（夜）メニュー</a>
+                <a href="kids.html" class="btn">お子様用メニュー</a>
             </div>
-            <p class="menu-desc">※ほかほかの炊きたてご飯をお届けします。</p>
-        </div>
-
-        <!-- 【夕方メニュー】 -->
-        <div class="section-block">
-            <h2>夕方（夜）メニュー</h2>
-            <div class="menu-item">
-                <span>夜限定満足食べ放題</span>
-                <span>3,500円</span>
-            </div>
-            <p class="menu-desc">※当店自慢の手作り料理を心ゆくまでお楽しみいただけます（90分制）。</p>
-        </div>
-
-        <!-- 【お子様用メニュー】 -->
-        <div class="section-block">
-            <h2>お子様用メニュー</h2>
-            <div class="menu-item">
-                <span>わくわくお子様セット（おもちゃ付き）</span>
-                <span>680円</span>
-            </div>
-            <p class="menu-desc">※ハンバーグ、エビフライ、ふりかけごはんなど、人気のメニューを詰め込みました。</p>
-        </div>
-
-        <!-- 【店舗情報・電話番号】 -->
-        <div class="section-block" style="border-top: 1px solid #ddd; padding-top: 30px; margin-bottom: 10px;">
+        </section>
+        <section style="border-top: 1px solid #ddd; padding-top: 20px; margin-top: 30px;">
             <h2>店舗情報</h2>
-            <p class="info-p"><strong>営業時間：</strong>11:00 〜 22:00</p>
+            <p class="info-p"><strong>営業時間：</strong>11:30 〜 21:00</p>
             <p class="info-p"><strong>住所：</strong>東京都渋谷区</p>
-            <p class="info-p"><strong>電話番号：</strong>0X-XXXX-XXXX</p>
-        </div>
+            <p class="info-p"><strong>電話番号：</strong>03-XXXX-XXXX</p>
+        </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 お食事処 ○○</p>
-    </footer>
-
+    <footer><p>&copy; 2026 レストラン</p></footer>
 </body>
 </html>
