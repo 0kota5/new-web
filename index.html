@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>レストラン</title>
+
+    <!-- 📱 iPhone用アプリ化設定 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="レストラン">
+
+    <!-- 💡 あなたの画像URLを直接フルアドレスで指定して、iPhoneに強制認識させます -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github.io">
+    <link rel="apple-touch-icon" href="https://github.io">
+
+    <!-- 🤖 Android用アプリ化設定 -->
+    <link rel="manifest" href="manifest.json">
+
     <style>
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
@@ -129,6 +142,20 @@
             font-weight: bold;
         }
     </style>
+
+    <!-- iOSアプリ内移動用の魔法のコード -->
+    <script>
+        document.addEventListener('click', function(e) {
+            var target = e.target;
+            while (target && target.tagName !== 'A') {
+                target = target.parentNode;
+            }
+            if (target && target.hasAttribute('href') && !target.hasAttribute('target')) {
+                e.preventDefault();
+                window.location = target.getAttribute('href');
+            }
+        }, false);
+    </script>
 </head>
 <body>
     <header>
